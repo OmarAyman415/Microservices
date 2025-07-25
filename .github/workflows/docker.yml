@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '23'
-          distribution: 'alpine'
+          distribution: 'temurin'
 
       - name: Set up Docker
         uses: docker/setup-buildx-action@v3
