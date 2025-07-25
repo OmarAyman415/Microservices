@@ -24,7 +24,7 @@ public class UserService implements IUserService{
         return Optional.of(request)
                 .filter(user -> !userRepository.existsByEmail(request.getEmail()))
                 .map(this::assignUserData)
-                .orElseThrow(() -> new AlreadyExistException(request.getEmail() + " already exists"));
+                .orElseThrow(() -> new AlreadyExistException(request.getEmail() + " already exists "));
     }
 
     private User assignUserData(CreateUserRequest request){
